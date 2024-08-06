@@ -5,7 +5,7 @@
 1. **Create a project folder** with lowercase letters e.g. folder "express_server"
 2. Add your application e.g. an express server
 3. Compile your project
-4. Add a file without extension called **dockerfile** to the root directory
+4. Add a file without extension called **Dockerfile** to the root directory
 
    - FROM: Sets the base image for the subsequent instructions
 
@@ -64,9 +64,9 @@
 #### Running a container
 
 ```
-docker run -p <host_port>:<container_port> <image_name>
+docker run -p <host_port>:<container_port> <image_name> --name <container_name>
 e.g.
-docker run -p 5005:5000 express_server
+docker run -p 5005:5000 express_server express_server
 ```
 
 The example will map the 5000 port used in the image and expose it to 5005, so the server will be reachable via 5005.  
