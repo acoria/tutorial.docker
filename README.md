@@ -64,9 +64,9 @@
 #### Running a container
 
 ```
-docker run -p <host_port>:<container_port> <image_name> --name <container_name>
+docker run -p <host_port>:<container_port> --name <container_name> <image_name>
 e.g.
-docker run -p 5005:5000 express_server express_server
+docker run -p 5005:5000 --name express_server express_server
 ```
 
 The example will map the 5000 port used in the image and expose it to 5005, so the server will be reachable via 5005.  
